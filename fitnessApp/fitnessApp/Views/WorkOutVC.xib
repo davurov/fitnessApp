@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkOutVC" customModule="fitnessApp" customModuleProvider="target">
+            <connections>
+                <outlet property="navTitle" destination="Ey2-DJ-aUZ" id="43Y-ZH-kIk"/>
+                <outlet property="tableview" destination="lqy-Dz-GjP" id="Ka1-Vc-htp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmD-t4-dbW">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reject weakness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey2-DJ-aUZ">
+                            <rect key="frame" x="63.333333333333343" y="109.33333333333333" width="266.66666666666663" height="40.666666666666671"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54l-d7-AZ7">
+                            <rect key="frame" x="10" y="60" width="68" height="26"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Back" image="arrow.backward" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                            </state>
+                            <connections>
+                                <action selector="backBtnPressed:" destination="-1" eventType="touchUpInside" id="koV-xu-GCI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ey2-DJ-aUZ" firstAttribute="centerX" secondItem="mmD-t4-dbW" secondAttribute="centerX" id="Sc2-Wo-Vlq"/>
+                        <constraint firstAttribute="bottom" secondItem="Ey2-DJ-aUZ" secondAttribute="bottom" id="dxq-gZ-ByW"/>
+                        <constraint firstAttribute="height" constant="150" id="iPE-tR-3FL"/>
+                        <constraint firstItem="54l-d7-AZ7" firstAttribute="leading" secondItem="mmD-t4-dbW" secondAttribute="leading" constant="10" id="ic7-wi-MRR"/>
+                        <constraint firstItem="54l-d7-AZ7" firstAttribute="top" secondItem="mmD-t4-dbW" secondAttribute="top" constant="60" id="loB-nD-X8G"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lqy-Dz-GjP">
+                    <rect key="frame" x="0.0" y="150" width="393" height="702"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="lqy-Dz-GjP" secondAttribute="bottom" id="2VA-ek-0OJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lqy-Dz-GjP" secondAttribute="trailing" id="A2z-xU-KrD"/>
+                <constraint firstItem="mmD-t4-dbW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Bq4-CT-toj"/>
+                <constraint firstItem="lqy-Dz-GjP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mol-uz-GX8"/>
+                <constraint firstItem="lqy-Dz-GjP" firstAttribute="top" secondItem="mmD-t4-dbW" secondAttribute="bottom" id="Ngi-eN-smf"/>
+                <constraint firstItem="mmD-t4-dbW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wle-c5-1fx"/>
+                <constraint firstItem="mmD-t4-dbW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xZa-Zy-Z8z"/>
+            </constraints>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="107" id="KGk-i7-Jjw" customClass="BodyPartCell" customModule="fitnessApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf5-3g-CRP">
+                        <rect key="frame" x="5" y="5" width="330" height="97"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZFD-zA-vrY">
+                                <rect key="frame" x="10" y="0.0" width="310" height="97"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.strengthtraining.traditional" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I45-T4-URI">
+                                        <rect key="frame" x="0.0" y="27.666666666666664" width="40" height="41.999999999999993"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="CMD-LD-s3z"/>
+                                            <constraint firstAttribute="height" constant="40" id="ch1-Yz-bvi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvi-qZ-mEA">
+                                        <rect key="frame" x="60" y="36.666666666666664" width="250" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZFD-zA-vrY" secondAttribute="bottom" id="62f-a3-Rxp"/>
+                            <constraint firstItem="ZFD-zA-vrY" firstAttribute="leading" secondItem="Sf5-3g-CRP" secondAttribute="leading" constant="10" id="gv4-TJ-hF5"/>
+                            <constraint firstItem="ZFD-zA-vrY" firstAttribute="top" secondItem="Sf5-3g-CRP" secondAttribute="top" id="uvz-rX-3lN"/>
+                            <constraint firstAttribute="trailing" secondItem="ZFD-zA-vrY" secondAttribute="trailing" constant="10" id="vAh-s3-9DD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Sf5-3g-CRP" secondAttribute="bottom" constant="5" id="PyA-Bk-kfx"/>
+                    <constraint firstItem="Sf5-3g-CRP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="hg2-5C-Zhc"/>
+                    <constraint firstItem="Sf5-3g-CRP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="hza-17-bJA"/>
+                    <constraint firstAttribute="trailing" secondItem="Sf5-3g-CRP" secondAttribute="trailing" constant="5" id="tuL-du-rPt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="BodyPartLbl" destination="Nvi-qZ-mEA" id="y8J-Ml-bOm"/>
+                <outlet property="bodyPartImage" destination="I45-T4-URI" id="tv4-Re-Lv5"/>
+            </connections>
+            <point key="canvasLocation" x="154.19847328244273" y="41.901408450704224"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="figure.strengthtraining.traditional" catalog="system" width="128" height="119"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
